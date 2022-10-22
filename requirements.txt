@@ -1,0 +1,10 @@
+# Basics packages
+pytest
+
+# Dataset Labelisation & Preprocessing
+roboflow
+
+# Deep Learning
+torch
+
+# Camera Control

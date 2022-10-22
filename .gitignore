@@ -1,0 +1,10 @@
+.env
+.python-version
+.ipynbche
+.DS_Store
+*.pyc
+.pytest_cache
+__pycache__
+.github
+yolov5
+rtfer/data
