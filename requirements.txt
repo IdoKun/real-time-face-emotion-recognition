@@ -8,3 +8,6 @@ roboflow
 torch
 
 # Camera Control
+
+# Web Server
+flask

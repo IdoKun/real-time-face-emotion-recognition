@@ -7,4 +7,4 @@
 __pycache__
 .github
 yolov5
-rtfer/data
+rtfer/data/*

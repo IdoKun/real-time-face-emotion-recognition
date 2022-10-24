@@ -11,8 +11,6 @@ import torch
 #model = torch.hub.load('ultralytics/yolov5', 'yolov5s')
 
 def live_feels(path_to_model='rtfer/models/yolov5_custom/',exp="exp0"):
-    print(os.path.join(path_to_model,exp,"best.pt"))
-    return
     model = torch.hub.load('ultralytics/yolov5'
                            ,"custom"
                            ,os.path.join(path_to_model,exp,"best.pt"))
