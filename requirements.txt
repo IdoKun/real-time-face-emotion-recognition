@@ -6,8 +6,11 @@ roboflow
 
 # Deep Learning
 torch
+tensorflow
+opencv-contrib-python
 
 # Camera Control
+
 
 # Web Server
 flask
