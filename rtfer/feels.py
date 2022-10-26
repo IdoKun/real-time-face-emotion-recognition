@@ -10,10 +10,12 @@ import torch
 # Basic
 #model = torch.hub.load('ultralytics/yolov5', 'yolov5s')
 
-def live_feels(path_to_model='rtfer/models/yolov5_custom/',exp="exp0"):
+def live_feels(path_to_model='rtfer/models/yolov5_custom/',exp="exp0",path_to_weight=None):
+    path_to_weight = os.path.join(path_to_model,exp,"best.pt") if path_to_weight == None else path_to_weight
+    print(f"Loading weight  in {path_to_weight}")
     model = torch.hub.load('ultralytics/yolov5'
                            ,"custom"
-                           ,os.path.join(path_to_model,exp,"best.pt"))
+                           ,path_to_weight)
     cap = cv2.VideoCapture(0)
     while cap.isOpened():
         ret, frame = cap.read()
