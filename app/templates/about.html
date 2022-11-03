@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<link rel ="stylesheet" href="static/css/credit_style.css" >
+
+<div class="about-section">
+  <h1>About Us</h1>
+  <p>Some text about who we are and why we do.</p>
+  <p>This website is part of a student projet for Le Wagon</p>
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="images/téléchargement.jpeg" alt="Anea" style="width:100%">
+      <div class="container">
+        <h2>Anea Zykaj</h2>
+        <p class="title">Data Scientist</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>anea@example.com</p>
+        <p>
+          <form class="linkedin-button" action="https://www.linkedin.com/in/anea-zykaj-373811220/" target="_blank">
+            <button class="btn btn-danger btn-lg" ><img src="{{ url_for('static', filename='images/linkedin.png') }}" width=30 color="blue" ></button>
+          </form>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="{{ url_for('static', filename='images/Ido_profile.jpeg') }}" alt="Ido" style="width:100%">
+      <div class="container">
+        <h2>Ido Azaria</h2>
+        <p class="title">CTO</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>ido@example.com</p>
+        <p>
+          <form class="linkedin-button" action="https://de.linkedin.com/in/ido-azaria-718a411aa" target="_blank">
+            <button class="btn btn-danger btn-lg" ><img src="{{ url_for('static', filename='images/linkedin.png') }}" width=30 ></button>
+          </form>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="https://media-exp1.licdn.com/dms/image/C4D03AQEGERkv_Bawgg/profile-displayphoto-shrink_200_200/0/1647530834303?e=1672876800&v=beta&t=mBui-PWZE9fJY_WL3Au0Q3wy_DPhXWXon17ef4kVP9g" alt="Aloys" style="width:100%">
+      <div class="container">
+        <h2>Aloÿs Bernard</h2>
+        <p class="title">Data Analyst</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>aloys.bernard@gmail.com</p>
+        <p>
+          <form class="linkedin-button" action="https://www.linkedin.com/in/aloys-bernard/" target="_blank">
+            <button class="btn btn-danger btn-lg" ><img src="{{ url_for('static', filename='images/linkedin.png') }}" width=30 ></button>
+          </form>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

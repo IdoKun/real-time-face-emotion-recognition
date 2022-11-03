@@ -1,4 +1,7 @@
-from flask import Flask, Response
+# You can run this app in local with your terminal with
+# $ flask --app app run
+
+from flask import Flask, Response, render_template
 import cv2
 import os
 import torch
@@ -9,14 +12,15 @@ app = Flask(__name__)
 
 #face_cascade = cv2.CascadeClassifier()
 #face_cascade.load(cv2.samples.findFile("haarcascade_frontalface_alt.xml"))
-model = torch.hub.load('ultralytics/yolov5'
-                           ,"custom"
-                           ,os.path.join("rtfer/models/yolov5_custom/","exp0","best.pt"))
+# model = torch.hub.load('ultralytics/yolov5'
+#                            ,"custom"
+#                            ,os.path.join("rtfer/models/yolov5_custom/","exp0","best.pt"))
+
 
 
 @app.route('/')
 def index():
-    return "Root of the Real Time Facial Emotion Recognition app"
+    return render_template("home.html")
 
 def gen():
     video = cv2.VideoCapture(0)

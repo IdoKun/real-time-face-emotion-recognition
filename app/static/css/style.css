@@ -1,0 +1,10 @@
+h1 {
+  border: 2px #eee solid;
+  color: rgb(30, 34, 144);
+  text-align: center;
+  padding: 10px;
+}
+
+p.title-description {
+  text-align: center;
+}

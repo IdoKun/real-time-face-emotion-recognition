@@ -16,7 +16,6 @@ import cv2
 detector = FER()
 
 
-
 def gen(video):
     while True:
         success, image = video.read()
@@ -32,7 +31,9 @@ def gen(video):
         #        [{'box': [277, 90, 48, 63], 'emotions': {'angry': 0.02, 'disgust': 0.0, 'fear': 0.05, 'happy': 0.16, 'neutral': 0.09, 'sad': 0.27, 'surprise': 0.41}]
         box,emotions = result["box"],result["emotions"]
         for i,emotion in enumerate(emotions.keys()):
-            cv2.putText(image, f"{emotion} : {emotions[emotion]} ", (50, 50+i*camera_height//len(emotions.keys())), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 3)
+            cv2.putText(image, f"{emotion} : {emotions[emotion]} ",
+                        (50, 50+i*camera_height//len(emotions.keys())),
+                        cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 3)
         print(box,box.shape,emotions)
         (x, y, w, h) = box
         # frame_gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
